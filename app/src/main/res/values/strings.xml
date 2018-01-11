@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">仁化公共服务</string>
+
+    <string-array name="sex_spinner">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+</resources>

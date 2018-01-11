@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_bar">
+
+        <FrameLayout style="@style/Header">
+
+            <ImageButton
+                android:id="@+id/back"
+                style="@style/HeaderBack"/>
+
+            <TextView
+                style="@style/HeaderTitle"
+                android:text="家电维修"/>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/category_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/title_bar"
+        android:background="@color/top_category_bar_background">
+
+        <ImageView
+            android:id="@+id/icon_category"
+            android:layout_width="10dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="center"
+            android:background="@color/colorF"/>
+
+        <ImageView
+            android:id="@+id/right_edge"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/icon_category"
+            android:background="@mipmap/ic_category_right_edge"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/right_edge">
+
+            <com.example.administrator.renhua.ui.view.CategoryTabStrip
+                android:id="@+id/category_strip"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:clipToPadding="false"
+                android:paddingLeft="6.0dip"
+                android:paddingRight="6.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/gray_strike"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#CCCCCC"
+        android:layout_below="@id/category_layout" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/gray_strike" />
+</RelativeLayout>

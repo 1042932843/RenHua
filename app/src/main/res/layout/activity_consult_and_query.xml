@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout style="@style/Header">
+
+        <ImageButton
+            android:id="@+id/back"
+            style="@style/HeaderBack"/>
+
+        <TextView
+            style="@style/HeaderTitle"
+            android:text="查询咨询" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/query"
+                android:layout_width="105dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_background"
+                android:drawableTop="@mipmap/ico_query"
+                android:text="查询"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/font_18dp"
+                android:padding="@dimen/padding_20dp"
+                android:gravity="center"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/consult"
+                android:layout_width="105dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_background"
+                android:drawableTop="@mipmap/ico_consulting"
+                android:text="咨询"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/font_18dp"
+                android:padding="@dimen/padding_20dp"
+                android:gravity="center"/>
+        </RelativeLayout>
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1">-->
+
+            <!--<Button-->
+                <!--android:id="@+id/complaint"-->
+                <!--android:layout_width="105dp"-->
+                <!--android:layout_height="120dp"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:background="@drawable/button_background"-->
+                <!--android:drawableTop="@mipmap/ico_complaint"-->
+                <!--android:text="投诉"-->
+                <!--android:textColor="#ffffffff"-->
+                <!--android:textSize="@dimen/font_18dp"-->
+                <!--android:padding="@dimen/padding_20dp"-->
+                <!--android:gravity="center"/>-->
+        <!--</RelativeLayout>-->
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

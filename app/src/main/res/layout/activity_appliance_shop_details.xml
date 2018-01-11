@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout style="@style/Header">
+
+        <ImageButton
+            android:id="@+id/back"
+            style="@style/HeaderBack"/>
+
+        <TextView
+            style="@style/HeaderTitle"
+            android:text="家电维修"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/enterprise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_14dp"
+        android:textColor="@color/color3"
+        android:padding="@dimen/padding_10dp"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/colorC"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_14dp"
+            android:textColor="@color/color3"
+            android:text="负责人："/>
+
+        <TextView
+            android:id="@+id/responsible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_14dp"
+            android:textColor="@color/color6"
+            android:text="仁化县佳和贸易"/>
+
+    </LinearLayout>
+
+    <View
+        style="@style/Divider"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_14dp"
+            android:textColor="@color/color3"
+            android:text="电话："/>
+
+        <TextView
+            android:id="@+id/tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_14dp"
+            android:textColor="@color/color6" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/Divider"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_14dp"
+            android:textColor="@color/color3"
+            android:text="注册号/统一社会信用代码："/>
+
+        <TextView
+            android:id="@+id/creditCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_14dp"
+            android:textColor="@color/color6" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/Divider"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_14dp"
+            android:textColor="@color/color3"
+            android:text="地址："/>
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_14dp"
+            android:textColor="@color/color6" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/Divider"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_14dp"
+            android:textColor="@color/color3"
+            android:text="经营范围："/>
+
+        <TextView
+            android:id="@+id/scope"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_14dp"
+            android:textColor="@color/color6" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/Divider"/>
+
+</LinearLayout>

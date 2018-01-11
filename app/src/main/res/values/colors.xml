@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="windowBackground">#4267C0</color>
+    <color name="listItem">#ffffffff</color>
+    <color name="listItemPressed">#ffdedede</color>
+
+    <color name="category_tab_text">#666666</color>
+    <color name="category_tab_text_dark">#fffafafa</color>
+    <color name="category_tab_highlight_text">#4267C0</color>
+    <color name="category_tab_highlight_text_dark">#ffd43d3d</color>
+    <color name="category_tab_highlight_bg">#ffd43d3d</color>
+    <color name="category_tab_highlight_dark_bg">#fffafafa</color>
+    <color name="top_category_bar_background">#ffffffff</color>
+
+    <color name="colorNone">#00000000</color>
+    <color name="colorBlue">#ff8c8dc5</color>
+    <color name="colorBlue80">#808c8dc5</color>
+    <color name="colorBlueDark">#ff5d6a84</color>
+    <color name="colorBlueDark80">#805d6a84</color>
+    <color name="colorBlueLight">#ff679aff</color>
+    <color name="colorBlueLight80">#80679aff</color>
+    <color name="colorChocolate">#ffa28433</color>
+    <color name="colorChocolate80">#80a28433</color>
+    <color name="colorOrange">#fff7761c</color>
+    <color name="colorOrange80">#80f7761c</color>
+    <color name="colorRed">#ffdc482c</color>
+    <color name="colorRed80">#80dc482c</color>
+    <color name="colorGreen">#ff34a638</color>
+    <color name="colorGreen80">#8034a638</color>
+    <color name="colorDark80">#80000000</color>
+    <color name="colorDark40">#40000000</color>
+    <color name="colorDark20">#20000000</color>
+    <color name="colorLight80">#80ffffff</color>
+    <color name="colorLight40">#40ffffff</color>
+    <color name="colorLight20">#20ffffff</color>
+    <color name="colorF">#ffffff</color>
+    <color name="colorF2">#fff2f2f2</color>
+    <color name="colorE">#ffeeeeee</color>
+    <color name="colorD">#ffdddddd</color>
+    <color name="colorC">#ffcccccc</color>
+    <color name="colorB">#ffbbbbbb</color>
+    <color name="colorA">#ffaaaaaa</color>
+    <color name="color9">#ff999999</color>
+    <color name="color7">#ff777777</color>
+    <color name="color6">#ff666666</color>
+    <color name="color3">#ff333333</color>
+    <color name="color0">#ff000000</color>
+</resources>

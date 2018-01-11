@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2015 珠海云集软件科技有限公司.
+  ~ Website：http://www.YunJi123.com
+  ~ Mail：dev@yunji123.com
+  ~ Tel：+86-0756-8605060
+  ~ QQ：340022641(dove)
+  ~ Author：dove
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/colorF">
+
+    <FrameLayout style="@style/Header">
+
+        <ImageButton
+            android:id="@+id/back"
+            style="@style/HeaderBack" />
+
+        <TextView
+            style="@style/HeaderTitle"
+            android:text="个人信息"/>
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding_12dp"/>
+
+            <View style="@style/Divider"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/name"
+                    style="@style/FromEditText"
+                    android:hint="用户名"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    style="@style/FromTextView"
+                    android:text="用户名"/>
+
+            </FrameLayout>
+
+            <View style="@style/Divider"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/idcard"
+                    style="@style/FromEditText"
+                    android:inputType="phone"
+                    android:hint="身份证号码"
+                    android:editable="false"/>
+
+                <TextView
+                    style="@style/FromTextView"
+                    android:text="身份证号码"/>
+
+            </FrameLayout>
+
+            <View style="@style/Divider"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/phone"
+                    style="@style/FromEditText"
+                    android:inputType="phone"
+                    android:hint="手机号"
+                    android:maxLength="11"/>
+
+                <TextView
+                    style="@style/FromTextView"
+                    android:text="手机号码"/>
+
+            </FrameLayout>
+
+            <View style="@style/Divider"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/real_name"
+                    style="@style/FromEditText"
+                    android:hint="请输入姓名"
+                    android:maxLength="10"/>
+
+                <TextView
+                    style="@style/FromTextView"
+                    android:text="姓名"/>
+
+            </FrameLayout>
+
+            <View style="@style/Divider"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/FromTextView"
+                    android:text="性别"/>
+
+                <Button
+                    android:id="@+id/sex"
+                    style="@style/FromEditText"
+                    android:drawableRight="@mipmap/ic_action_drop"
+                    android:hint="请选择性别"/>
+
+            </LinearLayout>
+
+            <View style="@style/Divider"/>
+
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/idcard_address"
+                    style="@style/FromEditText"
+                    android:maxLength="50"
+                    android:hint="修改证件地址"/>
+
+                <TextView
+                    style="@style/FromTextView"
+                    android:text="证件地址"/>
+
+            </FrameLayout>
+
+            <View style="@style/Divider"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/fix_phone"
+                    style="@style/FromEditText"
+                    android:inputType="phone"
+                    android:hint="修改固定电话"
+                    android:maxLength="14"/>
+
+                <TextView
+                    style="@style/FromTextView"
+                    android:text="固定电话"/>
+
+            </FrameLayout>
+
+            <View style="@style/Divider"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/email"
+                    style="@style/FromEditText"
+                    android:hint="修改邮箱"/>
+
+                <TextView
+                    style="@style/FromTextView"
+                    android:text="电子邮箱"/>
+
+            </FrameLayout>
+
+            <View style="@style/Divider"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/cunzen"
+                    style="@style/FromEditText"/>
+
+                <TextView
+                    style="@style/FromTextView"
+                    android:text="所属村镇"/>
+
+            </FrameLayout>
+
+            <View style="@style/Divider"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--<EditText-->
+                    <!--android:id="@+id/political"-->
+                    <!--style="@style/FromEditText"-->
+                    <!--android:hint="暂无信息"/>-->
+
+                <TextView
+                    style="@style/FromTextView"
+                    android:text="政治面貌" />
+
+                <Button
+                    android:id="@+id/political"
+                    style="@style/FromEditText"
+                    android:drawableRight="@mipmap/ic_action_drop"
+                    android:hint="请选择政治面貌"/>
+
+            </LinearLayout>
+
+            <View style="@style/Divider"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/address"
+                    style="@style/FromEditText"
+                    android:inputType="textMultiLine"
+                    android:maxLength="50"
+                    android:hint="修改地址" />
+
+                <TextView
+                    style="@style/FromTextView"
+                    android:text="地址"
+                    android:layout_height="wrap_content" />
+
+            </FrameLayout>
+
+            <View style="@style/Divider"/>
+
+            <Button
+                android:id="@+id/save"
+                style="@style/Button"
+                android:layout_margin="@dimen/padding_10dp"
+                android:text="保存"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout style="@style/Header">
+
+        <ImageButton
+            android:id="@+id/back"
+            style="@style/HeaderBack"/>
+
+        <TextView
+            style="@style/HeaderTitle"
+            android:text="办事指南" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="30dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/padding_10dp">
+
+            <LinearLayout
+                android:id="@+id/person_affairs"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/shape">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="办事指南"
+                    android:textColor="#ffffffff"
+                    android:textSize="@dimen/font_18dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/padding_10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(个人)"
+                    android:textColor="#ffffffff"
+                    android:textSize="@dimen/font_18dp"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/padding_10dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/company_affairs"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/shape"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="办事指南"
+                    android:textColor="#ffffffff"
+                    android:textSize="@dimen/font_18dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/padding_10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(法人)"
+                    android:textColor="#ffffffff"
+                    android:textSize="@dimen/font_18dp"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

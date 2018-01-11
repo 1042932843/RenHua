@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <FrameLayout style="@style/Header">
+
+        <ImageButton
+            android:id="@+id/back"
+            style="@style/HeaderBack" />
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/HeaderTitle"
+            android:text="综合评价" />
+    </FrameLayout>
+
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/rg2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/zt_evaluate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/consult_top_left_background"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="总体评价"
+                android:textColor="@color/consult_text_color"
+                android:textSize="15dp"/>
+
+            <RadioButton
+                android:id="@+id/bs_evaluate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/consult_top_right_background"
+                android:button="@null"
+                android:gravity="center"
+                android:text="办事评价"
+                android:textColor="@color/consult_text_color"
+                android:textSize="15dp"/>
+
+        </RadioGroup>
+
+        <com.example.administrator.renhua.ui.view.NoScrollViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

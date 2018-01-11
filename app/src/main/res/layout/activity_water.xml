@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <FrameLayout style="@style/Header">
+
+        <ImageButton
+            android:id="@+id/back"
+            style="@style/HeaderBack"/>
+
+        <TextView
+            style="@style/HeaderTitle"
+            android:text="水费缴纳"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_6dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:text="户号："
+            android:textColor="@color/color6"
+            android:textSize="@dimen/font_16dp"/>
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:hint="请输入户号"
+            android:background="@drawable/edit_text_background"
+            android:textSize="@dimen/font_16dp"
+            android:paddingLeft="15dp"
+            android:textColorHint="#CACACA"
+            android:singleLine="true"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="2"
+            android:background="@drawable/button_background"
+            android:text="查询"
+            android:textColor="@color/colorF"
+            android:textSize="@dimen/font_16dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@mipmap/shadow_blue_line"/>
+
+    <ListView
+        android:id="@+id/list"
+        style="@style/ListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

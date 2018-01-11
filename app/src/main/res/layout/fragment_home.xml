@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="#eff5ff">
+
+    <FrameLayout style="@style/Header">
+
+        <TextView
+            style="@style/HeaderTitle"
+            android:text="@string/app_name" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/index_bg1080"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="#ffe0e0e0" >
+
+            </com.daimajia.slider.library.SliderLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_20dp"
+                    android:paddingRight="@dimen/padding_20dp"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp">
+
+                    <TextView
+                        android:id="@+id/help"
+                        style="@style/HomeTextItem"
+                        android:drawableTop="@mipmap/index_ico_government"
+                        android:text="政务服务" />
+
+                    <TextView
+                        android:id="@+id/counsel"
+                        style="@style/HomeTextItem"
+                        android:drawableTop="@mipmap/index_ico_search"
+                        android:text="查询咨询" />
+
+                    <TextView
+                        android:id="@+id/target_poverty"
+                        style="@style/HomeTextItem"
+                        android:drawableTop="@mipmap/ic_targeted_poverty"
+                        android:text="精准扶贫" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_20dp"
+                    android:paddingRight="@dimen/padding_20dp"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:id="@+id/party_function"
+                        style="@style/HomeTextItem"
+                        android:drawableTop="@mipmap/ic_party_function"
+                        android:text="党组织运作" />
+
+                    <TextView
+                        android:id="@+id/auto_function"
+                        style="@style/HomeTextItem"
+                        android:drawableTop="@mipmap/ic_auto_function"
+                        android:text="自治组织运作" />
+
+                    <TextView
+                        android:id="@+id/economy_function"
+                        style="@style/HomeTextItem"
+                        android:drawableTop="@mipmap/ic_economy_function"
+                        android:text="经济组织运作" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_20dp"
+                    android:paddingRight="@dimen/padding_20dp"
+                    android:paddingBottom="@dimen/padding_20dp">
+
+                    <TextView
+                        android:id="@+id/evaluate"
+                        style="@style/HomeTextItem"
+                        android:drawableTop="@mipmap/index_evaluate"
+                        android:text="综合评价" />
+
+                    <TextView
+                        android:id="@+id/life_service"
+                        style="@style/HomeTextItem"
+                        android:drawableTop="@mipmap/ic_life_service"
+                        android:text="生活服务" />
+
+                    <TextView
+                        android:id="@+id/production_service"
+                        style="@style/HomeTextItem"
+                        android:drawableTop="@mipmap/ic_production_service"
+                        android:text="生产服务" />
+
+
+                </LinearLayout>
+
+                </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/seek_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    android:background="@drawable/list_item_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/padding_4dp"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/phone_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="标题标题标题标题"
+            android:textSize="@dimen/font_16dp"
+            android:layout_weight="5"
+            android:singleLine="true"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="@dimen/padding_10dp"
+            android:drawableLeft="@mipmap/ic_register_phone"
+            android:gravity="center_vertical"
+            android:drawablePadding="@dimen/padding_10dp"
+            android:textColor="@color/color3" />
+
+        <TextView
+            android:id="@+id/amt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:textSize="@dimen/font_16dp"
+            android:gravity="center_vertical"
+            android:textColor="#ee0909"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/padding_8dp">
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:textSize="13dp"
+            android:textColor="@color/color7"
+            android:paddingLeft="@dimen/padding_8dp"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.5"
+            android:textSize="13dp"
+            android:textColor="@color/color7"
+            android:paddingLeft="@dimen/padding_6dp"/>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:text="缴费成功"
+            android:textColor="#12cc12"
+            android:textSize="13dp" />
+    </LinearLayout>
+
+    <View style="@style/Divider"/>
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/ic_action_go"/>-->
+
+</LinearLayout>

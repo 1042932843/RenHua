@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <FrameLayout style="@style/Header">
+
+        <ImageButton
+            android:id="@+id/back"
+            style="@style/HeaderBack"/>
+
+        <TextView
+            style="@style/HeaderTitle"
+            android:text="查询"/>
+
+    </FrameLayout>
+
+    <!--<com.example.administrator.maoming.ui.view.AppWebView-->
+        <!--android:id="@+id/webView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="#fff3f3f3"/>-->
+
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorF"
+        android:cacheColorHint="@color/colorNone"
+        android:divider="@color/colorDark20"
+        android:dividerHeight="@dimen/size_1px"
+        android:listSelector="@color/colorNone"
+        android:paddingLeft="@dimen/padding_2dp"  />
+
+</LinearLayout>

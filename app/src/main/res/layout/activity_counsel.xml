@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright © 2015 珠海云集软件科技有限公司.
+  ~ Website：http://www.YunJi123.com
+  ~ Mail：dev@yunji123.com
+  ~ Tel：+86-0756-8605060
+  ~ QQ：340022641(dove)
+  ~ Author：dove
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <FrameLayout style="@style/Header">
+
+        <ImageButton
+            android:id="@+id/back"
+            style="@style/HeaderBack" />
+
+        <TextView
+            style="@style/HeaderTitle"
+            android:text="问题咨询" />
+
+    </FrameLayout>
+
+    <!--<FrameLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<android.support.v7.widget.Toolbar-->
+            <!--android:id="@+id/toolbar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="48dp"-->
+            <!--app:navigationIcon="?attr/homeAsUpIndicator"-->
+            <!--app:theme="@style/AppToolBar" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/title"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="48dp"-->
+            <!--android:gravity="center"-->
+            <!--android:text="问题咨询"-->
+            <!--android:textColor="@color/colorF"-->
+            <!--android:textSize="@dimen/font_18dp"/>-->
+    <!--</FrameLayout>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff3f3f3"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding_12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="问题主题:"
+                android:textColor="#424242" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/counsel_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="50"
+                android:background="#ffffffff"
+                android:gravity="left"
+                android:maxLines="3"
+                android:padding="10dp"
+                android:textSize="@dimen/font_14dp"
+                android:textColor="#333333"/>
+
+            <View style="@style/Divider" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="问题内容:"
+                android:textColor="#424242" />
+
+            <View style="@style/Divider" />
+
+            <EditText
+                android:id="@+id/counsel_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffffff"
+                android:gravity="top|left"
+                android:inputType="textMultiLine"
+                android:maxLength="500"
+                android:maxLines="10"
+                android:minLines="5"
+                android:padding="10dp"
+                android:textSize="@dimen/font_14dp"
+                android:textColor="#333333"/>
+
+            <View style="@style/Divider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="验证码:"
+                android:textColor="#424242" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_8dp"
+                android:paddingRight="@dimen/padding_8dp">
+
+                <EditText
+                    android:id="@+id/randcode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="#ffffffff"
+                    android:gravity="top|left"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp"
+                    android:textSize="@dimen/font_14dp"
+                    android:textColor="#333333"
+                    android:layout_marginRight="50dp"
+                    android:hint="请输入验证码"/>
+
+                <ImageView
+                    android:id="@+id/randomImg"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/ic_action_go"/>
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/submit"
+                style="@style/Button"
+                android:layout_margin="@dimen/padding_8dp"
+                android:text="提交" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

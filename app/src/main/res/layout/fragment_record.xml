@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/colorF">
+
+    <FrameLayout style="@style/Header">
+
+        <ImageButton
+            android:id="@+id/back"
+            style="@style/HeaderBack"/>
+
+        <TextView
+            style="@style/HeaderTitle"
+            android:text="我的记录" />
+
+    </FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/rg3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/cost_record"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:background="@drawable/record_radio_background"
+        android:button="@null"
+        android:checked="true"
+        android:gravity="center"
+        android:text="缴费记录"
+        android:textColor="@color/consult_text_color" />
+
+    <RadioButton
+        android:id="@+id/question_record"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:background="@drawable/record_radio_background"
+        android:button="@null"
+        android:gravity="center"
+        android:text="问题记录"
+        android:textColor="@color/consult_text_color" />
+
+        <RadioButton
+            android:id="@+id/affairs_record"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/record_radio_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="办事记录"
+            android:textColor="@color/consult_text_color" />
+
+    </RadioGroup>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:background="#fff3f3f3"/>
+
+    <!--<FrameLayout-->
+        <!--android:id="@+id/framelayout"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_width="match_parent">-->
+    <!--</FrameLayout>-->
+
+    <!--<ListView-->
+        <!--android:id="@+id/list"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/colorF"-->
+        <!--android:cacheColorHint="@color/colorNone"-->
+        <!--android:divider="@color/colorDark20"-->
+        <!--android:dividerHeight="@dimen/size_1px"-->
+        <!--android:listSelector="@color/colorNone"-->
+        <!--android:paddingLeft="@dimen/padding_2dp"  />-->
+
+</LinearLayout>

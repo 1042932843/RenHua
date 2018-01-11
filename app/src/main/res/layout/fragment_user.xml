@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/colorF">
+
+    <FrameLayout style="@style/Header">
+
+        <TextView
+            style="@style/HeaderTitle"
+            android:text="个人中心" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@color/windowBackground"
+                android:orientation="vertical">
+
+                <com.example.administrator.renhua.ui.view.CircleImageView
+                    android:id="@+id/user_head"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal|top"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/logo" />
+
+                <TextView
+                    android:id="@+id/version"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="#ffffff"
+                    android:textSize="14dp"
+                    android:text="版本号：1.0.15.0"
+                    android:layout_marginBottom="10dp"/>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:background="@color/colorF"
+                android:layout_marginBottom="40dp">
+
+                <TextView
+                    android:id="@+id/user_info"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@mipmap/ico_user_info"
+                    android:gravity="center"
+                    android:text="个人信息"
+                    android:textSize="@dimen/font_16dp"
+                    android:background="@drawable/menu_text_background"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:id="@+id/my_record"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@mipmap/ico_record"
+                    android:gravity="center"
+                    android:text="我的记录"
+                    android:textSize="@dimen/font_16dp"
+                    android:background="@drawable/menu_text_background"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:id="@+id/update_pwd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:background="@drawable/menu_text_background"
+                    android:padding="10dp"
+                    android:drawableTop="@mipmap/ico_change_password"
+                    android:text="修改密码"
+                    android:textSize="@dimen/font_16dp"/>
+
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingLeft="15dp"-->
+                <!--android:paddingRight="15dp"-->
+                <!--android:background="@color/colorF">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/evaluate"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_weight="1.0"-->
+                    <!--android:drawablePadding="10dp"-->
+                    <!--android:drawableTop="@mipmap/ico_evaluation"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="综合评价"-->
+                    <!--android:textSize="@dimen/font_16dp"-->
+                    <!--android:background="@drawable/menu_text_background"-->
+                    <!--android:padding="10dp"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_weight="1.0"-->
+                    <!--android:drawablePadding="10dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:textSize="@dimen/font_16dp"-->
+                    <!--android:background="@drawable/menu_text_background"-->
+                    <!--android:padding="10dp"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_weight="1.0"-->
+                    <!--android:drawablePadding="10dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:background="@drawable/menu_text_background"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:textSize="@dimen/font_16dp"/>-->
+
+            <!--</LinearLayout>-->
+
+            <Button
+                android:id="@+id/logout"
+                style="@style/Button"
+                android:layout_margin="@dimen/padding_8dp"
+                android:text="注销" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

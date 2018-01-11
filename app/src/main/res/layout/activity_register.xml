@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@mipmap/login_bg">
+
+    <FrameLayout style="@style/Header">
+
+        <ImageButton
+            android:id="@+id/back"
+            style="@style/HeaderBack" />
+
+        <TextView
+            style="@style/HeaderTitle"
+            android:text="注册" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#6197D3"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_6dp"
+                android:paddingRight="@dimen/padding_6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_6dp"
+                    android:paddingRight="@dimen/padding_6dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/padding_10dp"
+                        android:background="@mipmap/ico_user" />
+
+                    <EditText
+                        android:id="@+id/user_name"
+                        style="@style/RegisterEditText"
+                        android:hint="请输入用户名"
+                        android:maxLength="30"/>
+
+                </LinearLayout>
+
+                <View style="@style/Divider"
+                    android:layout_marginLeft="@dimen/padding_10dp"
+                    android:layout_marginRight="@dimen/padding_10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_6dp"
+                    android:background="@drawable/sex_button_background">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:background="@mipmap/ic_sex"
+                        android:id="@+id/imageView" />
+
+                    <Button
+                        android:id="@+id/sex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="请选择性别"
+                        android:textColor="#9DBFE6"
+                        android:gravity="left|center"
+                        android:textSize="@dimen/font_16dp"
+                        android:paddingLeft="@dimen/padding_10dp"
+                        android:drawableRight="@mipmap/ic_dropdown"
+                        android:paddingRight="@dimen/padding_12dp"
+                        android:background="#6197D3"/>
+
+                </LinearLayout>
+
+                <View style="@style/Divider"
+                    android:layout_marginLeft="@dimen/padding_10dp"
+                    android:layout_marginRight="@dimen/padding_10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_6dp"
+                    android:paddingRight="@dimen/padding_6dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/padding_10dp"
+                        android:background="@mipmap/ico_card" />
+
+                    <EditText
+                        android:digits="0123456789xX"
+                        android:id="@+id/idcard"
+                        style="@style/RegisterEditText"
+                        android:inputType="number"
+                        android:hint="请输入身份证号码"
+                        android:maxLength="18"/>
+
+                </LinearLayout>
+
+                <View style="@style/Divider"
+                    android:layout_marginLeft="@dimen/padding_10dp"
+                    android:layout_marginRight="@dimen/padding_10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_6dp"
+                    android:paddingRight="@dimen/padding_6dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/padding_10dp"
+                        android:background="@mipmap/ico_adress" />
+
+                    <EditText
+                        android:id="@+id/idcard_address"
+                        style="@style/RegisterEditText"
+                        android:hint="请输入身份证地址"
+                        android:inputType="text"
+                        android:maxLength="50"/>
+
+                </LinearLayout>
+
+                <View style="@style/Divider"
+                    android:layout_marginLeft="@dimen/padding_10dp"
+                    android:layout_marginRight="@dimen/padding_10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_6dp"
+                    android:paddingRight="@dimen/padding_6dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/padding_10dp"
+                        android:background="@mipmap/ico_phone2" />
+
+                    <EditText
+                        android:id="@+id/phone"
+                        style="@style/RegisterEditText"
+                        android:hint="请输入手机号"
+                        android:inputType="number"
+                        android:maxLength="11"/>
+
+                </LinearLayout>
+
+                <View style="@style/Divider"
+                    android:layout_marginLeft="@dimen/padding_10dp"
+                    android:layout_marginRight="@dimen/padding_10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_6dp"
+                    android:paddingRight="@dimen/padding_6dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/padding_10dp"
+                        android:background="@mipmap/ic_register_fix_phone" />
+
+                    <EditText
+                        android:id="@+id/fix_phone"
+                        style="@style/RegisterEditText"
+                        android:hint="请输入固定电话"
+                        android:inputType="number"
+                        android:maxLength="14"/>
+
+                </LinearLayout>
+
+                <View style="@style/Divider"
+                    android:layout_marginLeft="@dimen/padding_10dp"
+                    android:layout_marginRight="@dimen/padding_10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_6dp"
+                    android:paddingRight="@dimen/padding_6dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/padding_10dp"
+                        android:background="@mipmap/ic_register_email" />
+
+                    <EditText
+                        android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@."
+                        android:id="@+id/email"
+                        style="@style/RegisterEditText"
+                        android:hint="请输入电子邮箱" />
+
+                </LinearLayout>
+
+                <View style="@style/Divider"
+                    android:layout_marginLeft="@dimen/padding_10dp"
+                    android:layout_marginRight="@dimen/padding_10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_6dp"
+                    android:paddingRight="@dimen/padding_6dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/padding_10dp"
+                        android:background="@mipmap/ico_password" />
+
+                    <EditText
+                        android:id="@+id/password"
+                        style="@style/RegisterEditText"
+                        android:hint="请输入密码"
+                        android:digits="0123456789abcdefghigjklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:maxLength="20"
+                        android:inputType="textPassword" />
+
+                </LinearLayout>
+
+                <View style="@style/Divider"
+                    android:layout_marginLeft="@dimen/padding_10dp"
+                    android:layout_marginRight="@dimen/padding_10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_6dp"
+                    android:paddingRight="@dimen/padding_6dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/padding_10dp"
+                        android:background="@mipmap/ico_password" />
+
+                    <EditText
+                        android:id="@+id/password2"
+                        style="@style/RegisterEditText"
+                        android:hint="确认密码"
+                        android:digits="0123456789abcdefghigjklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:maxLength="20"
+                        android:inputType="textPassword"/>
+
+                </LinearLayout>
+
+                <View style="@style/Divider"
+                    android:layout_marginLeft="@dimen/padding_10dp"
+                    android:layout_marginRight="@dimen/padding_10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_6dp"
+                    android:paddingRight="@dimen/padding_6dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/padding_10dp"
+                        android:background="@mipmap/ico_village" />
+
+                    <TextView
+                        android:id="@+id/town"
+                        style="@style/RegisterEditText"
+                        android:hint="请选择所在村镇"
+                        android:drawableRight="@mipmap/ic_forward"
+                        android:editable="false" />
+
+                </LinearLayout>
+
+                <View style="@style/Divider"
+                    android:layout_marginLeft="@dimen/padding_10dp"
+                    android:layout_marginRight="@dimen/padding_10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_6dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:background="@mipmap/ic_register_political" />
+
+                    <Button
+                        android:id="@+id/political"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="请选择政治面貌"
+                        android:textColor="#9DBFE6"
+                        android:gravity="left|center"
+                        android:textSize="@dimen/font_16dp"
+                        android:paddingLeft="@dimen/padding_10dp"
+                        android:drawableRight="@mipmap/ic_dropdown"
+                        android:paddingRight="@dimen/padding_12dp"
+                        android:background="#6197D3"/>
+
+                </LinearLayout>
+
+                <View style="@style/Divider"
+                    android:layout_marginLeft="@dimen/padding_10dp"
+                    android:layout_marginRight="@dimen/padding_10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_6dp"
+                    android:paddingRight="@dimen/padding_6dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/padding_10dp"
+                        android:background="@mipmap/ico_adress" />
+
+                    <EditText
+                        android:id="@+id/address"
+                        style="@style/RegisterEditText"
+                        android:hint="请输入详细地址"
+                        android:inputType="text"
+                        android:maxLength="50"/>
+
+                </LinearLayout>
+
+                <View style="@style/Divider"
+                    android:layout_marginLeft="@dimen/padding_10dp"
+                    android:layout_marginRight="@dimen/padding_10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_6dp"
+                    android:paddingRight="@dimen/padding_6dp">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/padding_10dp"
+                        android:background="@mipmap/login_ico_code"
+                        android:layout_weight="0.3"/>
+
+                    <EditText
+                        android:id="@+id/randcode"
+                        style="@style/RegisterEditText"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:hint="请输入验证码"
+                        android:inputType="text" />
+
+                    <ImageView
+                        android:id="@+id/randCode_image"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <Button
+                android:id="@+id/register"
+                style="@style/ButtonYellow"
+                android:layout_marginTop="30dp"
+                android:text="注册" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

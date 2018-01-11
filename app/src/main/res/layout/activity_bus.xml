@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~  Copyright © 2015 珠海云集软件科技有限公司.
+  ~  Website：http://www.YunJi123.com
+  ~  Mail：dev@yunji123.com
+  ~  Tel：+86-0756-8605060
+  ~  QQ：340022641(dove)
+  ~  Author：dove
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <FrameLayout style="@style/Header">
+
+        <ImageButton
+            android:id="@+id/back"
+            style="@style/HeaderBack" />
+
+        <TextView
+            style="@style/HeaderTitle"
+            android:text="汽车购票" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@color/colorF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+               android:paddingTop="@dimen/padding_8dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <!--<View style="@style/Divider"/>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="出  发  站："
+                            android:textColor="@color/color3"
+                            android:textSize="@dimen/font_16dp" />
+
+                        <EditText
+                            android:id="@+id/start"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_background"
+                            android:drawableRight="@mipmap/ic_action_go"
+                            android:singleLine="true"
+                            android:textColor="@color/colorRed"
+                            android:textSize="@dimen/font_16dp"
+                            android:textColorHint="#CACACA"
+                            android:hint="请选择出发站"
+                            android:paddingLeft="15dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="到  达  站："
+                            android:textColor="@color/color3"
+                            android:textSize="@dimen/font_16dp" />
+
+                        <EditText
+                            android:id="@+id/end"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_background"
+                            android:drawableRight="@mipmap/ic_action_go"
+                            android:singleLine="true"
+                            android:textColor="@color/colorRed"
+                            android:textSize="@dimen/font_16dp"
+                            android:textColorHint="#CACACA"
+                            android:hint="请选择到达站"
+                            android:paddingLeft="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="出发日期："
+                            android:textColor="@color/color3"
+                            android:textSize="@dimen/font_16dp" />
+
+                        <EditText
+                            android:id="@+id/date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_background"
+                            android:drawableRight="@mipmap/ic_action_go"
+                            android:singleLine="true"
+                            android:textColor="@color/colorRed"
+                            android:textSize="@dimen/font_16dp"
+                            android:textColorHint="#CACACA"
+                            android:paddingLeft="15dp"/>
+                    </LinearLayout>
+
+            <Button
+                android:id="@+id/next"
+                style="@style/Button"
+                android:text="查  询"
+                android:textColor="@color/colorF"
+                android:layout_marginTop="@dimen/padding_20dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
