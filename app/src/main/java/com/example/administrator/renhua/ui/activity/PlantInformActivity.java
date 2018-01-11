@@ -1,8 +1,10 @@
 package com.example.administrator.renhua.ui.activity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Message;
+import android.webkit.DownloadListener;
 import android.webkit.JsResult;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
@@ -34,7 +36,15 @@ public class PlantInformActivity extends BaseActivity {
         String url = "http://www.rhggfw.com/lyweixin/view/home.html";
         mWebView.getSettings().setDomStorageEnabled(true);
         mWebView.loadUrl(url);
-
+        //webview默认关闭文件下载，要添加这个Listiner才行
+        mWebView.setDownloadListener(new DownloadListener() {
+            @Override
+            public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimetype, long contentLength) {
+                Uri uri = Uri.parse(url);
+                Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+                startActivity(intent);
+            }
+        });
 
         mWebView.setWebChromeClient(new WebChromeClient(){
 
