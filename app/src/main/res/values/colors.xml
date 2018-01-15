@@ -16,6 +16,12 @@
     <color name="category_tab_highlight_dark_bg">#fffafafa</color>
     <color name="top_category_bar_background">#ffffffff</color>
 
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#00000000</color>
+
+
+
     <color name="colorNone">#00000000</color>
     <color name="colorBlue">#ff8c8dc5</color>
     <color name="colorBlue80">#808c8dc5</color>
