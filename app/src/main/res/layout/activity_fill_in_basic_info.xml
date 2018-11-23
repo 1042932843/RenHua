@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorF"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <FrameLayout style="@style/Header">
+
+        <TextView
+            android:id="@+id/back"
+            style="@style/HeaderBack" />
+
+        <TextView
+            style="@style/HeaderTitle"
+            android:text="填写申请基本资料" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/light_blue"
+                android:padding="@dimen/padding_10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_attention"
+                    android:layout_marginRight="@dimen/padding_2dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="该业务办理模式为预受理，您还需在网上申办结束后，去您选择的地点提交材料正式办理。"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="项目名称"
+                    android:textColor="@color/colorA"
+                    android:textSize="@dimen/font_16dp" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:gravity="right|center_vertical"
+                    android:paddingLeft="@dimen/font_10dp"
+                    android:text="活动场所登记"
+                    android:textColor="@color/color6"
+                    android:textSize="@dimen/font_16dp" />
+
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_14dp"
+                android:paddingTop="@dimen/padding_14dp"
+                android:paddingBottom="@dimen/padding_14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="申请人类型"
+                    android:textColor="@color/colorA"
+                    android:textSize="@dimen/font_16dp"
+                    android:layout_marginRight="@dimen/padding_10dp"/>
+
+                <TextView
+                    android:id="@+id/serviceObjectType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:gravity="right|center_vertical"
+                    android:paddingLeft="@dimen/font_10dp"
+                    android:textColor="@color/color6"
+                    android:textSize="@dimen/font_16dp"
+                    android:drawableRight="@drawable/ic_select_choice"/>
+
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="申请单位或申请人"
+                    android:textColor="@color/colorA"
+                    android:textSize="@dimen/font_16dp"
+                    android:layout_marginRight="@dimen/padding_10dp"/>
+
+                <EditText
+                    android:id="@+id/applyUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/color6"
+                    android:textSize="@dimen/font_16dp"
+                    android:hint="请填写申请人/申请单位名称"
+                    android:textColorHint="@color/colorC"/>
+
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_14dp"
+                android:paddingTop="@dimen/padding_14dp"
+                android:paddingBottom="@dimen/padding_14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="申请人证件类型"
+                    android:textColor="@color/colorA"
+                    android:textSize="@dimen/font_16dp" />
+
+                <TextView
+                    android:id="@+id/certType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:gravity="right|center_vertical"
+                    android:paddingLeft="@dimen/font_10dp"
+                    android:textColor="@color/color6"
+                    android:textSize="@dimen/font_16dp"
+                    android:drawableRight="@drawable/ic_select_choice"/>
+
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="申请人证件号码"
+                    android:textColor="@color/colorA"
+                    android:textSize="@dimen/font_16dp"
+                    android:layout_marginRight="@dimen/padding_10dp"/>
+
+                <EditText
+                    android:id="@+id/certNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/color6"
+                    android:textSize="@dimen/font_16dp"
+                    android:maxLength="18"
+                    android:hint="请填写证件号码"
+                    android:textColorHint="@color/colorC"/>
+
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="申请人联系电话"
+                    android:textColor="@color/colorA"
+                    android:textSize="@dimen/font_16dp"
+                    android:layout_marginRight="@dimen/padding_10dp"/>
+
+                <EditText
+                    android:id="@+id/mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/color6"
+                    android:textSize="@dimen/font_16dp"
+                    android:maxLength="13"
+                    android:hint="请填写联系电话"
+                    android:textColorHint="@color/colorC"/>
+
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_14dp"
+                android:paddingTop="@dimen/padding_14dp"
+                android:paddingBottom="@dimen/padding_14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="申请人性别"
+                    android:textColor="@color/colorA"
+                    android:textSize="@dimen/font_16dp" />
+
+                <TextView
+                    android:id="@+id/sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:gravity="right|center_vertical"
+                    android:paddingLeft="@dimen/font_10dp"
+                    android:textColor="@color/color6"
+                    android:textSize="@dimen/font_16dp"
+                    android:drawableRight="@drawable/ic_select_choice"/>
+
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="申请人邮件"
+                    android:textColor="@color/colorA"
+                    android:textSize="@dimen/font_16dp"
+                    android:layout_marginRight="@dimen/padding_10dp"/>
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/color6"
+                    android:textSize="@dimen/font_16dp"
+                    android:hint="请填写申请人邮箱号码"
+                    android:textColorHint="@color/colorC"/>
+
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="申请人邮编"
+                    android:textColor="@color/colorA"
+                    android:textSize="@dimen/font_16dp"
+                    android:layout_marginRight="@dimen/padding_10dp"/>
+
+                <EditText
+                    android:id="@+id/postcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/color6"
+                    android:textSize="@dimen/font_16dp"
+                    android:hint="请填写申请人邮编"
+                    android:textColorHint="@color/colorC"/>
+
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="申请人联系地址"
+                    android:textColor="@color/colorA"
+                    android:textSize="@dimen/font_16dp"
+                    android:layout_marginRight="@dimen/padding_10dp" />
+
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/color6"
+                    android:textSize="@dimen/font_16dp"
+                    android:hint="请填写联系地址"
+                    android:textColorHint="@color/colorC"/>
+
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_10dp"
+                android:text="企业选填"
+                android:textColor="@color/colorA"
+                android:textSize="@dimen/font_14dp"
+                android:background="@color/colorE"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="企业名称"
+                    android:textColor="@color/colorA"
+                    android:textSize="@dimen/font_16dp"
+                    android:layout_marginRight="@dimen/padding_10dp"/>
+
+                <EditText
+                    android:id="@+id/corpName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/color6"
+                    android:textSize="@dimen/font_16dp"
+                    android:hint="请填写企业名称"
+                    android:textColorHint="@color/colorC"/>
+
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="营业执照"
+                    android:textColor="@color/colorA"
+                    android:textSize="@dimen/font_16dp"
+                    android:layout_marginRight="@dimen/padding_10dp"/>
+
+                <EditText
+                    android:id="@+id/busiLicense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/color6"
+                    android:textSize="@dimen/font_16dp"
+                    android:hint="请填写营业执照"
+                    android:textColorHint="@color/colorC"/>
+
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="地税登记号"
+                    android:textColor="@color/colorA"
+                    android:textSize="@dimen/font_16dp"
+                    android:layout_marginRight="@dimen/padding_10dp"/>
+
+                <EditText
+                    android:id="@+id/ltaxNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/color6"
+                    android:textSize="@dimen/font_16dp"
+                    android:hint="请填写地税登记号"
+                    android:textColorHint="@color/colorC"/>
+
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="国税登记号"
+                    android:textColor="@color/colorA"
+                    android:textSize="@dimen/font_16dp"
+                    android:layout_marginRight="@dimen/padding_10dp"/>
+
+                <EditText
+                    android:id="@+id/gtaxNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/color6"
+                    android:textSize="@dimen/font_16dp"
+                    android:hint="请填写国税登记号"
+                    android:textColorHint="@color/colorC"/>
+
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <Button
+                android:id="@+id/submit_info"
+                style="@style/Button"
+                android:layout_margin="@dimen/padding_20dp"
+                android:text="下一步" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

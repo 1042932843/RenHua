@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:id="@+id/Header"
+        style="@style/Header">
+
+        <ImageView
+            android:id="@+id/back"
+            style="@style/HeaderBack" />
+
+        <TextView
+            style="@style/HeaderTitle"
+            android:text="政务服务" />
+
+    </FrameLayout>
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@+id/Header"-->
+        <!--android:scrollbars="none">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/line_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F3F3FB"
+                android:paddingTop="@dimen/padding_4dp"
+                android:paddingBottom="@dimen/padding_4dp">
+
+                <RelativeLayout
+                    android:id="@+id/progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/font_10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/blue_item_background"
+                    android:minHeight="120dp"
+                    android:minWidth="120dp">
+
+                    <ImageView
+                        android:id="@+id/img_1"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ic_progress_search" />
+
+                    <TextView
+                        android:id="@+id/Recharge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="进度查询"
+                        android:textColor="#fff"
+                        android:textSize="18dp"
+                        android:layout_below="@+id/img_1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="13dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/affairs_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/font_10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/yellow_item_background"
+                    android:minHeight="120dp"
+                    android:minWidth="120dp">
+
+                    <ImageView
+                        android:id="@+id/img_2"
+                        android:layout_width="@dimen/size_60dp"
+                        android:layout_height="@dimen/size_60dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ic_order" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="13dp"
+                        android:text="事项检索"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                style="@style/Divider"
+                android:background="@color/windowBackground" />
+
+            <LinearLayout
+                android:id="@+id/rela_1"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/line_1"
+                android:minHeight="@dimen/size_40dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox1"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/personal_affairs_background"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="个人事项"
+                    android:textColor="@color/affairs_check_text_color"
+                    android:textSize="16dp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox2"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/personal_affairs_background"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="企业事项"
+                    android:textColor="@color/affairs_check_text_color"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/Divider"
+                android:background="@color/windowBackground" />
+
+            <LinearLayout
+                android:id="@+id/person_area"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/colorF"
+                    app:tabIndicatorColor="@color/windowBackground"
+                    app:tabIndicatorHeight="3dp"
+                    app:tabSelectedTextColor="@color/windowBackground"
+                    app:tabTextColor="@color/color6" />
+
+                <View
+                    style="@style/Divider"
+                    android:background="@color/windowBackground" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <com.example.administrator.renhua.ui.view.PullToRefreshLayout
+                    android:id="@+id/pull"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp">
+                    <ListView
+                        android:id="@+id/list"
+                        style="@style/ListView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:childDivider="#00000000"
+                        android:childIndicator="@null"
+                        android:divider="#ffcccccc"
+                        android:dividerHeight="1px"
+                        android:groupIndicator="@null" />
+
+                </com.example.administrator.renhua.ui.view.PullToRefreshLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/company_area"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/colorF"
+                    app:tabIndicatorColor="@color/windowBackground"
+                    app:tabIndicatorHeight="3dp"
+                    app:tabSelectedTextColor="@color/windowBackground"
+                    app:tabTextColor="@color/color6" />
+
+                <View
+                    style="@style/Divider"
+                    android:background="@color/windowBackground" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </android.support.v7.widget.RecyclerView>
+
+
+                <com.example.administrator.renhua.ui.view.PullToRefreshLayout
+                    android:id="@+id/pull1"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp">
+                    <ListView
+                        android:id="@+id/list1"
+                        style="@style/ListView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:childDivider="#00000000"
+                        android:childIndicator="@null"
+                        android:divider="#ffcccccc"
+                        android:dividerHeight="@dimen/size_1px"
+                        android:groupIndicator="@null" />
+
+                </com.example.administrator.renhua.ui.view.PullToRefreshLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <!--</ScrollView>-->
+
+</LinearLayout>
+
+
+
+
+

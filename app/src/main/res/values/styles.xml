@@ -22,6 +22,18 @@
         <item name="android:dividerHeight">1px</item>
     </style>
 
+    <style name="AppSheet" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/colorNone</item>
+        <item name="android:windowAnimationStyle">@style/AppSheetAnim</item>
+    </style>
+    <style name="AppSheetAnim">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
     <style name="FullScreen" parent="AppTheme">
         <item name="android:windowFullscreen">true</item>
     </style>
@@ -242,4 +254,22 @@
         <item name="android:textColor">#333333</item>
     </style>
 
+    <style name="Button1">
+        <item name="android:textColor">@color/windowBackground</item>
+        <item name="android:textSize">@dimen/font_18dp</item>
+        <item name="android:background">@drawable/list_frame_background</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+
+
+    <style name="Button2">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">@dimen/font_16dp</item>
+        <item name="android:background">@drawable/button_green_background</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/size_48dp</item>
+        <item name="android:layout_marginLeft">@dimen/padding_10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
 </resources>

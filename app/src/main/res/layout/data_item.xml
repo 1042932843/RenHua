@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="@dimen/dp_8"
+    android:layout_marginBottom="@dimen/dp_8"
+    android:layout_marginRight="@dimen/dp_4"
+    android:layout_marginLeft="@dimen/dp_4"
+    >
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="@dimen/dp_12"
+       >
+       <RelativeLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerVertical="true">
+
+
+       <LinearLayout
+           android:id="@+id/topall"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+           <TextView
+               android:id="@+id/title"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="@dimen/sp_16"
+               tools:text="@string/app_name"/>
+           <TextView
+               android:layout_marginTop="@dimen/dp_6"
+               android:id="@+id/tip"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="@dimen/sp_14"
+               tools:hint="@string/app_name"/>
+       </LinearLayout>
+
+      <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/topall">
+          <TextView
+              android:padding="@dimen/dp_6"
+              android:id="@+id/download"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:layout_toStartOf="@+id/upload"
+
+              android:layout_toLeftOf="@+id/upload"
+              android:textSize="@dimen/sp_12"
+              android:layout_marginRight="@dimen/dp_6"/>
+          <TextView
+              android:padding="@dimen/dp_6"
+              android:id="@+id/upload"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:layout_alignParentRight="true"
+              android:text="上传"
+              />
+      </RelativeLayout>
+       </RelativeLayout>
+   </RelativeLayout>
+
+</android.support.v7.widget.CardView>

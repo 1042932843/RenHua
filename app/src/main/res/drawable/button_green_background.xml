@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2015 珠海云集软件科技有限公司.
+  ~ Website：http://www.YunJi123.com
+  ~ Mail：dev@yunji123.com
+  ~ Tel：+86-0756-8605060
+  ~ QQ：340022641(dove)
+  ~ Author：dove
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_enabled="false">
+        <layer-list>
+            <item android:top="@dimen/padding_4dp" android:bottom="@dimen/padding_4dp"
+                  android:left="@dimen/padding_4dp" android:right="@dimen/padding_4dp">
+                <shape android:shape="rectangle">
+                    <corners android:radius="@dimen/padding_4dp"/>
+                    <padding android:top="@dimen/padding_8dp" android:bottom="@dimen/padding_8dp"
+                             android:left="@dimen/padding_8dp" android:right="@dimen/padding_8dp"/>
+                    <size android:width="@dimen/size_300dp" android:height="@dimen/size_48dp"/>
+                    <solid android:color="#ffdedede"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:top="@dimen/padding_4dp" android:bottom="@dimen/padding_4dp"
+                  android:left="@dimen/padding_4dp" android:right="@dimen/padding_4dp">
+                <shape android:shape="rectangle">
+                    <corners android:radius="@dimen/padding_4dp"/>
+                    <padding android:top="@dimen/padding_8dp" android:bottom="@dimen/padding_8dp"
+                             android:left="@dimen/padding_8dp" android:right="@dimen/padding_8dp"/>
+                    <size android:width="@dimen/size_300dp" android:height="@dimen/size_48dp"/>
+                    <solid android:color="#ff30bc30"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <item>
+        <layer-list>
+            <item android:top="@dimen/padding_4dp" android:bottom="@dimen/padding_4dp"
+                  android:left="@dimen/padding_4dp" android:right="@dimen/padding_4dp">
+                <shape android:shape="rectangle">
+                    <corners android:radius="@dimen/padding_4dp"/>
+                    <size android:width="@dimen/size_300dp" android:height="@dimen/size_48dp"/>
+                    <solid android:color="#ff34cc34"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

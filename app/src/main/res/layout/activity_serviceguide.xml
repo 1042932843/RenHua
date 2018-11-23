@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F3FB"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        style="@style/Header">
+
+        <ImageView
+            android:id="@+id/back"
+            style="@style/HeaderBack" />
+
+        <TextView
+            android:layout_toLeftOf="@+id/drawerimg"
+            android:id="@+id/Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="办事指南"
+            android:textColor="#fff"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/drawerimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:background="@android:color/transparent">
+
+
+        <RelativeLayout
+            android:id="@+id/rela"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/lin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/Apply"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background"
+                    android:text="我要申请"
+                    android:textColor="#fff" />
+
+                <Button
+                    android:id="@+id/chaxun"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background"
+                    android:text="进度查询"
+                    android:textColor="#fff" />
+
+            </LinearLayout>
+
+            <com.example.administrator.renhua.ui.view.CustomWebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/lin" />
+
+
+        </RelativeLayout>
+
+
+        <!-- 右侧滑动栏 -->
+
+        <LinearLayout
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="#fff"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/list"
+                style="@style/ListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:childDivider="#00000000"
+                android:childIndicator="@null"
+                android:divider="#00000000"
+                android:dividerHeight="0dp"
+                android:groupIndicator="@null" />
+        </LinearLayout>
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+</RelativeLayout>

@@ -34,7 +34,7 @@
                     <padding android:bottom="@dimen/padding_8dp" android:left="@dimen/padding_8dp"
                              android:right="@dimen/padding_8dp" android:top="@dimen/padding_8dp"/>
                     <size android:width="@dimen/size_300dp" android:height="@dimen/size_48dp"/>
-                    <solid android:color="#4c7aec"/>
+                    <solid android:color="#0b82e7"/>
                 </shape>
             </item>
         </layer-list>

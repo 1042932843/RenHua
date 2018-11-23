@@ -25,5 +25,6 @@ public class LoginResponse {
     public String idcard;
     public String zName;
     public String cName;
+    public String token;
 
 }

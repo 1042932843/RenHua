@@ -17,7 +17,7 @@ import android.util.Log;
 /**
  * 片段分页适配器 保存和恢复状态
  */
-public final class FragmentPagerAdapter extends FragmentStatePagerAdapter {
+public  class FragmentPagerAdapter extends FragmentStatePagerAdapter {
 
     private final Class<?>[] classes;
     private final Fragment[] fragments;

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2015 珠海云集软件科技有限公司.
+  ~ Website：http://www.YunJi123.com
+  ~ Mail：dev@yunji123.com
+  ~ Tel：+86-0756-8605060
+  ~ QQ：340022641(dove)
+  ~ Author：dove
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <layer-list>
+            <item android:bottom="@dimen/padding_4dp" android:left="@dimen/padding_4dp"
+                  android:right="@dimen/padding_4dp" android:top="@dimen/padding_4dp">
+                <shape>
+                    <corners android:radius="@dimen/padding_4dp"/>
+                    <size android:width="@dimen/size_64dp" android:height="@dimen/size_40dp"/>
+                    <solid android:color="#ffdedede"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:bottom="@dimen/padding_4dp" android:left="@dimen/padding_4dp"
+                  android:right="@dimen/padding_4dp" android:top="@dimen/padding_4dp">
+                <shape>
+                    <corners android:radius="@dimen/padding_4dp"/>
+                    <size android:width="@dimen/size_64dp" android:height="@dimen/size_40dp"/>
+                    <solid android:color="#ffd75702"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <item>
+        <layer-list>
+            <item android:bottom="@dimen/padding_4dp" android:left="@dimen/padding_4dp"
+                  android:right="@dimen/padding_4dp" android:top="@dimen/padding_4dp">
+                <shape>
+                    <corners android:radius="@dimen/padding_4dp"/>
+                    <size android:width="@dimen/size_64dp" android:height="@dimen/size_40dp"/>
+                    <solid android:color="#ffff6702"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

@@ -1,8 +1,10 @@
 package com.example.administrator.renhua.ui.activity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Message;
+import android.webkit.DownloadListener;
 import android.webkit.JsResult;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
@@ -12,12 +14,11 @@ import android.widget.Toast;
 import com.example.administrator.renhua.App;
 import com.example.administrator.renhua.R;
 import com.example.administrator.renhua.ui.view.AppWebView;
-import com.uuzuche.lib_zxing.activity.CodeUtils;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
+import zxing.decoding.Intents;
 public class PlantInformActivity extends BaseActivity {
 
     @Bind(R.id.webView)
@@ -34,7 +35,15 @@ public class PlantInformActivity extends BaseActivity {
         String url = "http://www.rhggfw.com/lyweixin/view/home.html";
         mWebView.getSettings().setDomStorageEnabled(true);
         mWebView.loadUrl(url);
-
+        //webview默认关闭文件下载，要添加这个Listiner才行
+        mWebView.setDownloadListener(new DownloadListener() {
+            @Override
+            public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimetype, long contentLength) {
+                Uri uri = Uri.parse(url);
+                Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+                startActivity(intent);
+            }
+        });
 
         mWebView.setWebChromeClient(new WebChromeClient(){
 
@@ -81,30 +90,23 @@ public class PlantInformActivity extends BaseActivity {
 
     @OnClick(R.id.fab)
     public void fabClick() {
-        Intent intent = new Intent(PlantInformActivity.this, QRCodeActivity.class);
+        Intent intent = new Intent(PlantInformActivity.this, MipcaActivityCapture.class);
+        intent.setAction(Intents.Scan.ACTION);
+        intent.putExtra(Intents.Scan.SCAN_FORMATS, "QR_CODE");
         startActivityForResult(intent, 1);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == 1) {
-            //处理扫描结果（在界面上显示）
-            if (null != data) {
-                Bundle bundle = data.getExtras();
-                if (bundle == null) {
-                    return;
-                }
-                if (bundle.getInt(CodeUtils.RESULT_TYPE) == CodeUtils.RESULT_SUCCESS) {
-                    String result = bundle.getString(CodeUtils.RESULT_STRING);
-                    Toast.makeText(this, "解析结果:" + result, Toast.LENGTH_LONG).show();
-//                    Intent intent = new Intent(PlantInformActivity.this,WebViewActivity.class);
-//                    intent.putExtra("mark","plant");
-//                    intent.putExtra("url",result);
-//                    startActivity(intent);
-                } else if (bundle.getInt(CodeUtils.RESULT_TYPE) == CodeUtils.RESULT_FAILED) {
-                    Toast.makeText(PlantInformActivity.this, "解析二维码失败", Toast.LENGTH_LONG).show();
-                }
-            }
+
+        if(resultCode==RESULT_OK){
+            Bundle bundle =  data.getExtras();
+            String result = bundle.getString("result");
+            Toast.makeText(PlantInformActivity.this,result,Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(PlantInformActivity.this,WebViewActivity.class);
+            intent.putExtra("mark","plant");
+            intent.putExtra("url",result);
+            startActivity(intent);
         }
 
     }

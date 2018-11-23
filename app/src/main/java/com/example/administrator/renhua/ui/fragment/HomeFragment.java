@@ -17,6 +17,7 @@ import com.example.administrator.renhua.R;
 import com.example.administrator.renhua.entity.LoginResponse;
 import com.example.administrator.renhua.ui.activity.ConsultAndQueryActivity;
 import com.example.administrator.renhua.ui.activity.EvaluateActivity;
+import com.example.administrator.renhua.ui.activity.GovernmentAffairsActivity;
 import com.example.administrator.renhua.ui.activity.LifeServiceActivity;
 import com.example.administrator.renhua.ui.activity.LoginActivity;
 import com.example.administrator.renhua.ui.activity.ProductionServiceActivity;
@@ -47,13 +48,13 @@ public class HomeFragment extends BaseFragment{
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         mSlider.addSlider(new DefaultSliderView(getActivity())
                 .setScaleType(BaseSliderView.ScaleType.CenterCrop)
-                .image("http://www.rhggfw.com:9700/rhggfw/webpage/views/app/img/app-4.jpg"));
+                .image("http://www.rhggfw.com:8080/rhggfw/webpage/views/app/img/app-4.jpg"));
         mSlider.addSlider(new DefaultSliderView(getActivity())
                 .setScaleType(BaseSliderView.ScaleType.CenterCrop)
-                .image("http://www.rhggfw.com:9700/rhggfw/webpage/views/app/img/app-5.jpg"));
+                .image("http://www.rhggfw.com:8080/rhggfw/webpage/views/app/img/app-5.jpg"));
         mSlider.addSlider(new DefaultSliderView(getActivity())
                 .setScaleType(BaseSliderView.ScaleType.CenterCrop)
-                .image("http://www.rhggfw.com:9700/rhggfw/webpage/views/app/img/app-6.jpg"));
+                .image("http://www.rhggfw.com:8080/rhggfw/webpage/views/app/img/app-6.jpg"));
         mSlider.setPresetIndicator(SliderLayout.PresetIndicators.Right_Bottom);
         PagerIndicator indicator = mSlider.getPagerIndicator();
         indicator.setDefaultSelectedIndicatorSize(8f, 8f, PagerIndicator.Unit.DP);
@@ -64,9 +65,7 @@ public class HomeFragment extends BaseFragment{
     @OnClick(R.id.help)
     void onHelp(){
 //        App.me().toast("建设中");
-        Intent intent = new Intent(getActivity(), WebViewActivity.class);
-        intent.putExtra("mark", "governmentService");
-        startActivity(intent);
+        startActivity(new Intent(getActivity(), GovernmentAffairsActivity.class));
     }
 
     @OnClick(R.id.counsel)

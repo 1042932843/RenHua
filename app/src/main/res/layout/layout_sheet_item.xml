@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~  Copyright © 2015 珠海云集软件科技有限公司.
+  ~  Website：http://www.YunJi123.com
+  ~  Mail：dev@yunji123.com
+  ~  Tel：+86-0756-8605060
+  ~  QQ：340022641(dove)
+  ~  Author：dove
+  -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/padding_8dp">
+
+    <TextView
+        android:id="@+id/sheetItem"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_48dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/sheet_item_selector"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/color3"
+        android:textSize="@dimen/font_16dp" />
+</FrameLayout>

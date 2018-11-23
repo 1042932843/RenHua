@@ -69,9 +69,9 @@ public class QuestionRecordFragment extends BaseFragment implements HolderBuilde
             mNoData.setText("请先登录哦^-^");
             mNoData.setVisibility(View.VISIBLE);
         }else {
-            uploadQuestions = new UploadQuestions(getActivity());
-            uploadQuestions.getQuestions(login.id);
-            mList.setAdapter(adapter = new HolderListAdapter<SeekDetailTwo>(getActivity(), this));
+           // uploadQuestions = new UploadQuestions(getActivity());
+            //uploadQuestions.getQuestions(login.id);
+            //mList.setAdapter(adapter = new HolderListAdapter<SeekDetailTwo>(getActivity(), this));
         }
     }
 
@@ -130,8 +130,8 @@ public class QuestionRecordFragment extends BaseFragment implements HolderBuilde
 
     @Subscriber(tag = "CounselActivity.submitSuccess")
     void refresh(String idcard){
-        LoginResponse login = App.me().login();
-        uploadQuestions.getQuestions(login.id);
+        //LoginResponse login = App.me().login();
+        //uploadQuestions.getQuestions(login.id);
     }
 
     @Override

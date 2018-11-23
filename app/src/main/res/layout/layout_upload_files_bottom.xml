@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical">
+
+    <Button
+        android:id="@+id/submit"
+        style="@style/Button"
+        android:text="立即申请"
+        android:layout_margin="@dimen/padding_20dp"/>
+
+    <Button
+        android:id="@+id/exit"
+        style="@style/Button1"
+        android:text="退出申请"
+        android:layout_marginRight="@dimen/padding_20dp"
+        android:layout_marginLeft="@dimen/padding_20dp"
+        android:layout_marginBottom="@dimen/padding_20dp"/>
+</LinearLayout>

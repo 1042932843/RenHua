@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.Window;
 import android.view.WindowManager;
 
 import com.example.administrator.renhua.App;
 import com.example.administrator.renhua.R;
+import com.example.administrator.renhua.kit.SheetKit;
 import com.example.administrator.renhua.ui.listener.SystemBarTintManager;
 import com.pgyersdk.crash.PgyCrashManager;
 import com.pgyersdk.feedback.PgyFeedbackShakeManager;
@@ -51,8 +53,18 @@ public class BaseActivity extends AppCompatActivity {
         }
         win.setAttributes(winParams);
     }
-
-
+    SheetKit sheetKit;
+    protected SheetKit sheetKit() {
+        if (sheetKit == null) {
+            synchronized (this) {
+                if (sheetKit == null) {
+                    sheetKit = new SheetKit(this);
+                    Log.d("reg", "create sheetKit");
+                }
+            }
+        }
+        return sheetKit;
+    }
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         App.me().hideInput(getWindow());

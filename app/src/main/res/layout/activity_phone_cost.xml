@@ -60,7 +60,7 @@
 
             </LinearLayout>
 
-            <!--<com.example.k.fengxipro.view.AutoLinearLayout-->
+            <!--<com.example.administrator.renhua.ui.view.PullToRefreshLayout-->
             <!--android:id="@+id/items"-->
             <!--android:layout_width="match_parent"-->
             <!--android:layout_height="wrap_content"-->

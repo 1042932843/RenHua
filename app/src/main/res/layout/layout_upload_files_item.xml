@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorF">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_14dp"
+        android:text="1：宗教活动场所等级申请表"
+        android:textColor="@color/color3"
+        android:textSize="@dimen/font_16dp"/>
+
+    <View style="@style/Divider"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_14dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorA"
+            android:textSize="@dimen/font_16dp"
+            android:text="是否必须："/>
+
+        <TextView
+            android:id="@+id/is_need"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color3"
+            android:textSize="@dimen/font_16dp"
+            android:gravity="right|center_vertical"
+            android:text="否"/>
+
+    </LinearLayout>
+
+    <View style="@style/Divider"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_14dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorA"
+            android:textSize="@dimen/font_16dp"
+            android:text="允许提交方式："/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color3"
+            android:textSize="@dimen/font_16dp"
+            android:gravity="right|center_vertical"
+            android:text="网上提交"/>
+
+    </LinearLayout>
+
+    <View style="@style/Divider"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_14dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorA"
+            android:textSize="@dimen/font_16dp"
+            android:text="提交文件："/>
+
+        <ImageView
+            android:id="@+id/upload"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+             android:background="@color/colorE"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/padding_4dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/doc_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorA"
+        android:textSize="@dimen/font_16dp"
+        android:gravity="right|center_vertical"
+        android:text="未选择任何文件"
+        android:paddingRight="@dimen/padding_14dp"
+        android:paddingBottom="@dimen/padding_10dp"/>
+
+    <View
+        style="@style/Divider"
+        android:layout_height="@dimen/padding_14dp"
+        android:background="@color/colorE"/>
+
+</LinearLayout>

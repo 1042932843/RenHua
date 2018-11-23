@@ -77,8 +77,8 @@ public class CostRecordFragment extends BaseFragment implements HolderBuilder {
         } else {
 //            uploadQuestions = new UploadQuestions(this);
 //            uploadQuestions.getPhoneCost(login.id);
-            getListPay(login.id);
-            mList.setAdapter(adapter = new HolderListAdapter<CostRecord>(getActivity(), this));
+            //getListPay(login.id);
+            //mList.setAdapter(adapter = new HolderListAdapter<CostRecord>(getActivity(), this));
         }
     }
 
@@ -138,7 +138,7 @@ public class CostRecordFragment extends BaseFragment implements HolderBuilder {
     @Subscriber(tag = "CounselActivity.submitSuccess")
     void refresh(String idcard) {
         LoginResponse login = App.me().login();
-        getListPay(login.id);
+        //getListPay(login.id);
     }
 
     @Override

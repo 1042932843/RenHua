@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="@dimen/padding_6dp"
+    android:id="@+id/government_item">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/circle_shape_purple"
+                android:scaleType="centerInside"
+                android:src="@drawable/mei_you_tu_pian"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="人才"
+                android:textColor="@color/color3"
+                android:textSize="12dp" />
+
+</LinearLayout>

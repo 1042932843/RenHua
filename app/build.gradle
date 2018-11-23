@@ -3,12 +3,13 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 24
     buildToolsVersion '26.0.2'
+    useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "com.example.administrator.renhua"
         minSdkVersion 14
         targetSdkVersion 24
-        versionCode 18
-        versionName "1.2.0.2"
+        versionCode 20
+        versionName '1.2.1.3'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
 
@@ -19,7 +20,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
     applicationVariants.all { variant ->
         variant.outputs.each { output ->
             def oldFile = output.outputFile
@@ -30,6 +30,12 @@ android {
             }
 
         }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+    productFlavors {
     }
 }
 
@@ -49,6 +55,7 @@ dependencies {
     compile files('libs/UPPayPluginExPro.jar')
     compile files('libs/UPPayAssistEx.jar')
     compile files('libs/xUtils-2.6.14.jar')
+    compile files('libs/zixing-core-3.2.0.jar')
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'com.android.support:design:24.2.1'
     compile 'com.jakewharton:butterknife:7.0.1'
@@ -62,5 +69,6 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.2.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
-    compile 'cn.yipianfengye.android:zxing-library:2.2'
+    //    compile 'cn.yipianfengye.android:zxing-library:2.2'
+    compile 'in.srain.cube:ultra-ptr:1.0.8@aar'
 }

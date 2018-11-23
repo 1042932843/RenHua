@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/farmer"
+        style="@style/Header">
+
+        <ImageView
+            android:id="@+id/back"
+            style="@style/HeaderBack"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/HeaderTitle"
+            android:singleLine="true"
+            android:layout_width="200dp"
+            android:gravity="center"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/white"
+            android:text="完成"
+            android:layout_marginRight="@dimen/dp_10"
+            />
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/farmer">
+
+            <LinearLayout
+                android:id="@+id/lin_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:background="@color/windowBackground"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="资料上传"
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="现场办理该业务时，您需要满足以下条件并提供下列的材料，请自检是否符合要求"
+                    android:textColor="#fff"
+                    android:textSize="15dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rela"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin_layout"
+                android:orientation="vertical">
+                <android.support.v4.widget.SwipeRefreshLayout
+                    android:id="@+id/swipe_refresh_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never">
+                </android.support.v7.widget.RecyclerView>
+                </android.support.v4.widget.SwipeRefreshLayout>
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+</RelativeLayout>

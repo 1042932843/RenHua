@@ -3,7 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-
+    <color name="radioItem">#ffffffff</color>
+    <color name="radioItemPressed">#60AA3E</color>
+    <color name="textcolor">#303031</color>
     <color name="windowBackground">#4267C0</color>
     <color name="listItem">#ffffffff</color>
     <color name="listItemPressed">#ffdedede</color>
@@ -49,4 +51,7 @@
     <color name="color6">#ff666666</color>
     <color name="color3">#ff333333</color>
     <color name="color0">#ff000000</color>
+    <color name="background">#f3f3fb</color>
+    <color name="light_blue">#D7E5F5</color>
+    <color name="transparent">#f50</color>
 </resources>

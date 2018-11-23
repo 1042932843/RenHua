@@ -17,9 +17,8 @@
                     <corners android:radius="@dimen/padding_4dp"/>
                     <padding android:bottom="@dimen/padding_8dp" android:left="@dimen/padding_8dp"
                              android:right="@dimen/padding_8dp" android:top="@dimen/padding_8dp"/>
-                    <size android:width="@dimen/size_300dp" android:height="40dp"/>
-                    <solid android:color="#ffffff"/>
-                    <stroke android:width="1dp" android:color="#f6f6f6f6"/>
+                    <size android:width="@dimen/size_300dp" android:height="@dimen/size_48dp"/>
+                    <solid android:color="#ffdedede"/>
                 </shape>
             </item>
         </layer-list>
@@ -33,10 +32,9 @@
                     <corners android:radius="@dimen/padding_4dp"/>
                     <padding android:bottom="@dimen/padding_8dp" android:left="@dimen/padding_8dp"
                              android:right="@dimen/padding_8dp" android:top="@dimen/padding_8dp"/>
-                    <size android:width="@dimen/size_300dp" android:height="40dp"/>
-                    <solid android:color="#ffffff"/>
-                    <stroke android:width="1dp" android:color="@color/colorPrimary"/>
-                    <!--<stroke android:width="1dp" android:color="#aeceed"/>-->
+                    <size android:width="@dimen/size_300dp" android:height="@dimen/size_48dp"/>
+                    <solid android:color="#ffffffff"/>
+                    <stroke android:width="1dp" android:color="#0E90FE"/>
                 </shape>
             </item>
         </layer-list>
@@ -49,10 +47,9 @@
                     <corners android:radius="@dimen/padding_4dp"/>
                     <padding android:bottom="@dimen/padding_8dp" android:left="@dimen/padding_8dp"
                              android:right="@dimen/padding_8dp" android:top="@dimen/padding_8dp"/>
-                    <size android:width="@dimen/size_300dp" android:height="40dp"/>
-                    <solid android:color="#ffffff"/>
-                    <stroke android:width="1dp" android:color="@color/colorPrimary"/>
-                    <!--<stroke android:width="1px" android:color="#aeceed"/>-->
+                    <size android:width="@dimen/size_300dp" android:height="@dimen/size_48dp"/>
+                    <solid android:color="#ffffffff"/>
+                    <stroke android:width="1px" android:color="#0E90FE"/>
                 </shape>
             </item>
         </layer-list>
@@ -65,10 +62,9 @@
                     <corners android:radius="@dimen/padding_4dp"/>
                     <padding android:bottom="@dimen/padding_8dp" android:left="@dimen/padding_8dp"
                              android:right="@dimen/padding_8dp" android:top="@dimen/padding_8dp"/>
-                    <size android:width="@dimen/size_300dp" android:height="40dp"/>
-                    <solid android:color="#ffffff"/>
-                    <stroke android:width="1dp" android:color="@color/colorPrimary"/>
-                    <!--<stroke android:width="1px" android:color="#aeceed"/>-->
+                    <size android:width="@dimen/size_300dp" android:height="@dimen/size_48dp"/>
+                    <solid android:color="#ffffffff"/>
+                    <stroke android:width="1px" android:color="#ffcdcdcd"/>
                 </shape>
             </item>
         </layer-list>

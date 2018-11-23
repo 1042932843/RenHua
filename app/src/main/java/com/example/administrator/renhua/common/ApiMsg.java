@@ -14,22 +14,17 @@ package com.example.administrator.renhua.common;
  */
 public class ApiMsg {
     public Exception exception;
-    private String state;
-    private String message;
-    private String result;
-    private String success;
-    private String obj;
-    private String msg;
     private String attributes;
-    private String jsonStr;
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
+    private String msg;
+    private String obj;
+    private String success;
+    private String result;
+    private String state;
+    private String status;
+    private String list;
+    private String dataList;
+    private String resultInfo;
+    private String callTime;
 
     public String getMessage() {
         return message;
@@ -39,25 +34,7 @@ public class ApiMsg {
         this.message = message;
     }
 
-    public String getResult() {
-        return result;
-    }
-
-    public void setResult(String result) {
-        this.result = result;
-    }
-
-    public boolean isSuccess() {
-        return "1".equals(state);
-    }
-
-    public boolean hasException() {
-        return exception != null;
-    }
-
-    public boolean hasResult() {
-        return result != null;
-    }
+    private String message;
 
     public Exception getException() {
         return exception;
@@ -65,30 +42,6 @@ public class ApiMsg {
 
     public void setException(Exception exception) {
         this.exception = exception;
-    }
-
-    public String getSuccess() {
-        return success;
-    }
-
-    public void setSuccess(String success) {
-        this.success = success;
-    }
-
-    public String getObj() {
-        return obj;
-    }
-
-    public void setObj(String obj) {
-        this.obj = obj;
-    }
-
-    public String getMsg() {
-        return msg;
-    }
-
-    public void setMsg(String msg) {
-        this.msg = msg;
     }
 
     public String getAttributes() {
@@ -99,11 +52,85 @@ public class ApiMsg {
         this.attributes = attributes;
     }
 
-    public String getJsonStr() {
-        return jsonStr;
+    public String getMsg() {
+        return msg;
     }
 
-    public void setJsonStr(String jsonStr) {
-        this.jsonStr = jsonStr;
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    public String getObj() {
+        return obj;
+    }
+
+    public void setObj(String obj) {
+        this.obj = obj;
+    }
+
+    public String getSuccess() {
+        return success;
+    }
+
+    public void setSuccess(String success) {
+        this.success = success;
+    }
+
+    public boolean hasException() {
+        return exception != null;
+    }
+
+    public String getResult() {
+        return result;
+    }
+
+    public void setResult(String result) {
+        this.result = result;
+    }
+    public void setState(String state) {
+        this.state=state;
+    }
+    public String getState() {
+        return state;
+    }
+
+    public String getList() {
+        return list;
+    }
+
+    public void setList(String list) {
+        this.list = list;
+    }
+
+    public String getDataList() {
+        return dataList;
+    }
+
+    public void setDataList(String dataList) {
+        this.dataList = dataList;
+    }
+
+    public String getResultInfo() {
+        return resultInfo;
+    }
+
+    public void setResultInfo(String resultInfo) {
+        this.resultInfo = resultInfo;
+    }
+
+    public String getCallTime() {
+        return callTime;
+    }
+
+    public void setCallTime(String callTime) {
+        this.callTime = callTime;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

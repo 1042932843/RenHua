@@ -34,7 +34,7 @@
                     <padding android:bottom="@dimen/padding_8dp" android:left="@dimen/padding_8dp"
                              android:right="@dimen/padding_8dp" android:top="@dimen/padding_8dp"/>
                     <size android:width="@dimen/size_300dp" android:height="@dimen/size_48dp"/>
-                    <solid android:color="#de8426"/>
+                    <solid android:color="#F2C200"/>
                 </shape>
             </item>
         </layer-list>
@@ -47,7 +47,7 @@
                 <shape android:shape="rectangle">
                     <corners android:radius="@dimen/padding_4dp"/>
                     <size android:width="@dimen/size_300dp" android:height="@dimen/size_48dp"/>
-                    <solid android:color="#F4942E"/>
+                    <solid android:color="#F2C200"/>
                 </shape>
             </item>
         </layer-list>

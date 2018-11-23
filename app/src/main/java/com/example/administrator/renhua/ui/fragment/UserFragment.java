@@ -17,6 +17,7 @@ import com.example.administrator.renhua.ui.activity.LoginActivity;
 import com.example.administrator.renhua.ui.activity.MyRecordActivity;
 import com.example.administrator.renhua.ui.activity.UpdatePwdActivity;
 import com.example.administrator.renhua.ui.activity.UserInfoActicity;
+import com.example.administrator.renhua.utils.ToastUtil;
 
 import org.simple.eventbus.EventBus;
 import org.simple.eventbus.Subscriber;
@@ -47,15 +48,17 @@ public class UserFragment extends BaseFragment {
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+    public void onResume() {//和activity的onResume绑定，Fragment初始化的时候必调用，但切换fragment的hide和visible的时候可能不会调用！
+        super.onResume();
         LoginResponse login = App.me().login();
         if (login == null) {
             mLogout.setText("登录");
         } else {
-            mLogout.setText("退出");
+            mLogout.setText("注销");
         }
     }
+
+
 
     @OnClick(R.id.logout)
     void onLogout() {
@@ -65,8 +68,8 @@ public class UserFragment extends BaseFragment {
         } else {
             App.me().logout();
             mLogout.setText("登录");
-            EventBus.getDefault().post("login", "UserFragment.onLogoutSuccess");
-            startActivity(new Intent(getActivity(), LoginActivity.class));
+            ToastUtil.ShortToast("注销成功");
+            //startActivity(new Intent(getActivity(), LoginActivity.class));
         }
     }
 
